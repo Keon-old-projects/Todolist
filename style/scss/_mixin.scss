@@ -1,0 +1,159 @@
+// 按鈕樣式
+@mixin shape-btn($color) {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: $color;
+    background-color: transparent;
+    position: relative;
+    transition: all .3s linear;
+
+    p {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        box-sizing: border-box;
+        border-top: 1px solid $color;
+        border-left: 1px solid $color;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .3s linear;
+    }
+
+    &::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        display: block;
+        box-sizing: border-box;
+        border-bottom: 1px solid $color;
+        border-right: 1px solid $color;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transition: all .3s ease;
+    }
+
+    &:hover::before,
+    &:hover::after {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@mixin btn-hover-outline($font-size, $color, $bg-color) {
+    padding: 10px 15px;
+    border: 0;
+    font-size: $font-size ;
+    background-color: $bg-color;
+    text-decoration: none;
+    color: $color;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:hover {
+        color: $bg-color;
+        background-color: #fff;
+        border: 2px $color solid;
+    }
+}
+
+// 圖片放大效果
+@mixin pic-enlarge {
+    overflow: hidden;
+
+    img {
+        transform: scale(1, 1);
+        transition: all 1s ease-out;
+
+        &:hover {
+            transform: scale(1.2, 1.2);
+        }
+    }
+}
+
+// RWD響應式 media query
+
+@mixin rwd($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin rwd-xl {
+    @media (max-width:$xl) {
+        @content;
+    }
+}
+@mixin rwd-lg {
+    @media (max-width:$lg) {
+        @content;
+    }
+}
+@mixin rwd-md {
+    @media (max-width:$md) {
+        @content;
+    }
+}
+@mixin rwd-sm {
+    @media (max-width:$sm) {
+        @content;
+    }
+}
+@mixin rwd-xs {
+    @media (max-width:480px) {
+        @content;
+    }
+}
+
+//行動優先設計 (Mobile First Design)
+@mixin mobile {
+    @media (max-width: calc($sm - 1px)) {
+      @content;
+    }
+  }
+  
+  @mixin mobile-sm {
+    @media (min-width:$sm){
+      @content;
+    }
+  }
+  
+  @mixin mobile-md {
+    @media (min-width:$md){
+      @content;
+    }
+  }
+  
+  @mixin mobile-lg {
+    @media (min-width:$lg){
+      @content;
+    }
+  }
+  
+  @mixin mobile-xl {
+    @media (max-width:$xl) {
+      @content;
+    }
+  }
+// 狀態
+@mixin link{  //連結樣式
+    &:link,&:visited{  
+      @content;
+    } 
+  } 
+@mixin link-hover{ //被點擊後的樣式
+&:hover, &:focus, &:active,&.active{
+    @content;
+} 
+} 

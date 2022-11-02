@@ -1,0 +1,9 @@
+p {
+    color: $primary;
+  }
+
+.content{
+  @include grid{
+    color:#000;
+  }
+}

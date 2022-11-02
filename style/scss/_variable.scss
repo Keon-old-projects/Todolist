@@ -1,0 +1,35 @@
+// RWD斷點設計
+	$pc: 1024px;
+	$mobile: 768px;
+	$sm: 576px;
+	$md: 768px;
+	$lg: 992px;
+	$xl: 1200px;
+
+// 字體大小
+	$font-size-base: 16px; //網站字體基本大小
+	$font-l: 2rem;
+	$font-m: 1rem;
+	$font-s: 0.75rem;
+	
+
+// 字體行距
+	$line-height-base: 16px; // 預設行距
+
+// 字體顏色
+	$primary: #3f8089; //主要顏色
+	$primary-variant: #02535c; //主要顏色變體
+	$secondary: #ffa661; //次要顏色
+	$secondary-variant: #c87734; //次要顏色變體
+	$link-color: purple; //連結顏色
+	$link-hover-color: darken($link-color, 20%); //連結hover
+	$success: green; // 表示成功或積極
+	$info: #0dcaf0; // 代表了一些信息更改或操作
+	$warning: #ffc107; //表示可能需要注意的警告
+	$danger: #dc3545; //表示危險或潛在的負面操作
+	$error: #dc3545; //與$danger一樣
+	$light: #f8f9fa; //亮色
+	$dark: #212529; //暗色
+
+
+//
