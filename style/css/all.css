@@ -165,4 +165,53 @@ input[type=number], button[type=number][type=submit] {
 button[type=submit] {
   background: #aaf;
   cursor: pointer;
+}
+
+@-webkit-keyframes scaleUP {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUP {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .todo {
+  display: flex;
+  font-size: 1.5rem;
+  background: #fff;
+  border-radius: 3px;
+  color: #000;
+  margin: 0.2rem 0;
+}
+section .todo p {
+  padding: 0.5rem;
+  line-height: 1.5;
+}
+section .todo button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+}
+section .todo .check {
+  background: lightgreen;
+}
+section .todo .trash {
+  background: red;
 }/*# sourceMappingURL=all.css.map */

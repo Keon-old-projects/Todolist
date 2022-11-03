@@ -33,3 +33,45 @@ button[type="submit"]{
   cursor: pointer;
   @extend input;
 }
+
+@keyframes scaleUP {
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .todo{
+      display: flex;
+      font-size: 1.5rem;
+      background: #fff;
+      border-radius: 3px;
+      color: #000;
+      margin: 0.2rem 0;
+      p{
+          padding: 0.5rem;
+          line-height: 1.5;
+      }
+      button{
+          padding: 0.25rem 0.5rem;
+          font-size: 1.75rem;
+          border: none;
+          cursor: pointer;
+          color: #fff;
+          border-radius: 3px;
+      }
+      .check{
+          background: lightgreen;
+          
+      }
+      .trash{
+          background: red;
+      }
+  }
+}

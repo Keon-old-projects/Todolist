@@ -9,16 +9,35 @@ add.addEventListener("click", e => {
     let todoDate=form.children[2].value;
     // console.log(todoText+"  "+todoMon+"/"+todoDate);
 
-    //新增todo清單
+    //todo清單
     let todo = document.createElement("div");
     todo.classList.add("todo");
     let text = document.createElement("p");
     text.classList.add("todo-text");
-    text.innerHTML=todoText;
+    text.innerText=todoText;
     let time = document.createElement("p");
     time.classList.add('todo-time');
-    time.innerHTML=todoMon+' / '+todoDate;
+    time.innerText=todoMon+' / '+todoDate;
     todo.appendChild(text);
     todo.appendChild(time);
+    
+
+    //todo右側選項按鈕
+    // 勾選
+    let checkButton = document.createElement("button");
+    checkButton.classList.add('check');
+    checkButton.innerHTML='<i class="fa-solid fa-check"></i>'
+    // 垃圾
+    let trashButton = document.createElement('button');
+    trashButton.classList.add("trash");
+    trashButton.innerHTML='<i class="fa-solid fa-trash"></i>'
+    
+    // 新增icons
+    todo.appendChild(checkButton);
+    todo.appendChild(trashButton);
+
+    //動畫效果
+    todo.style.animation="scaleUP 0.5s forwards"
+    // 新增清單
     section.appendChild(todo);
 })
