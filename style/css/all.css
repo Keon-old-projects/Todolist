@@ -54,6 +54,8 @@ table {
 
 body {
   font-size: 16px;
+  background: linear-gradient(45deg, #cfc, #f9a);
+  height: 100vh;
 }
 
 a:link, a:visited {
@@ -63,17 +65,68 @@ a:hover, a:focus, a:active, a.active {
   color: #02535c;
 }
 
+h1 {
+  font-size: 3rem;
+  color: #aff;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: #3f8089;
+  font-size: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.my-3 {
+  margin: 1rem 0;
+}
+
+.my-4 {
+  margin: 1.5rem 0;
+}
+
+.my-5 {
+  margin: 2rem 0;
+}
+
+.mx-a {
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.border-1 {
+  border: 1px solid #000;
+}
+
 .l-nav {
   padding: 0;
   margin: 0;
 }
 
-p {
-  color: #3f8089;
-}
-
-@media (max-width: 575px) {
-  .content {
-    color: #000;
-  }
+.btn-box {
+  text-align: center;
+  margin-top: 1rem;
 }/*# sourceMappingURL=all.css.map */

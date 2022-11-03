@@ -1,6 +1,8 @@
 // 網頁基本設定(html tag標籤)
 body{
     font-size: $font-size-base;
+    background: linear-gradient(45deg,#cfc,#f9a);
+    height: 100vh;
 }
 a{
     @include link{
@@ -9,4 +11,23 @@ a{
     @include link-hover{
         color: $primary-variant;
     }
+}
+
+
+h1{
+    font-size: 3rem;
+    color:#aff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+}
+form{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color: $primary;
+    font-size: 1rem;
 }

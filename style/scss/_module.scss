@@ -1,0 +1,35 @@
+//文字
+.text-center{
+    text-align: center;
+}
+// 間隔
+.my-3{
+    margin: 1rem 0;
+}
+.my-4{
+    margin: 1.5rem 0;
+}
+.my-5{
+    margin: 2rem 0;
+}
+.mx-a{
+    margin: 0 auto;
+}
+//flex
+.d-flex{
+    display: flex;
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.column-reverse{
+    flex-direction: column-reverse;
+}
+
+//border
+%border-black{
+    border: 1px solid #000;
+}
+.border-1{
+    border: 1px solid #000;
+}

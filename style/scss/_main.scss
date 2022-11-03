@@ -1,10 +1,4 @@
-p {
-    color: $primary;
-    font-size: 1rem;
-  }
-
-.content{
-  @include grid{
-    color:#000;
-  }
+.btn-box{
+  text-align: center;
+  margin-top: 1rem;
 }
