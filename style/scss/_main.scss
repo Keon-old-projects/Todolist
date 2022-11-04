@@ -1,8 +1,9 @@
-.btn-box{
+.btn-box {
   text-align: center;
   margin-top: 1rem;
 }
-input{
+
+input {
   padding: 0.25rem 0.5rem;
   font-size: 1.75rem;
   border: none;
@@ -10,13 +11,16 @@ input{
   border-radius: 0.25rem;
   transition: all 0.15s;
 }
-input:hover{
-  outline:3px solid #444;
+
+input:hover {
+  outline: 3px solid #444;
 }
-input[type="number"]{
+
+input[type="number"] {
   width: 50px;
   text-align: center;
 }
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -28,50 +32,84 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-button[type="submit"]{
+
+button[type="submit"] {
   background: #aaf;
   cursor: pointer;
   @extend input;
 }
 
 @keyframes scaleUP {
-  from{
+  from {
     transform: scale(0);
   }
-  to{
+
+  to {
     transform: scale(1);
   }
 }
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
 
-section{
+  to {
+    transform: scale(0);
+  }
+}
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .todo{
-      display: flex;
-      font-size: 1.5rem;
+
+  .todo {
+    display: flex;
+    width: 25vw;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 0.2rem 0;
+    overflow: hidden;
+    animation: scaleUP 0.5s forwards;
+
+    p {
+      padding: 0.25rem 0.5rem;
+      line-height: 2;
+      // text-align: center;
       background: #fff;
+    }
+
+    .todo-text {
+      width: 50%;
+    }
+
+    .todo-time {
+      width: 20%;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border: none;
+      cursor: pointer;
+      color: #fff;
       border-radius: 3px;
-      color: #000;
-      margin: 0.2rem 0;
-      p{
-          padding: 0.5rem;
-          line-height: 1.5;
-      }
-      button{
-          padding: 0.25rem 0.5rem;
-          font-size: 1.75rem;
-          border: none;
-          cursor: pointer;
-          color: #fff;
-          border-radius: 3px;
-      }
-      .check{
-          background: lightgreen;
-          
-      }
-      .trash{
-          background: red;
-      }
+
+    }
+
+    .check {
+      background: lightgreen;
+
+    }
+
+    .trash {
+      background: red;
+    }
   }
+}
+
+.done {
+  text-decoration: line-through;
+  text-decoration-style: 0.2rem;
+  opacity: 0.5;
 }

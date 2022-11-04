@@ -82,7 +82,11 @@ form {
 
 p {
   color: #3f8089;
-  font-size: 1rem;
+  font-size: 1.25rem;
+}
+
+i {
+  pointer-events: none;
 }
 
 .text-center {
@@ -184,6 +188,22 @@ button[type=submit] {
     transform: scale(1);
   }
 }
+@-webkit-keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 section {
   display: flex;
   flex-direction: column;
@@ -191,15 +211,25 @@ section {
 }
 section .todo {
   display: flex;
+  width: 25vw;
   font-size: 1.5rem;
-  background: #fff;
-  border-radius: 3px;
-  color: #000;
+  border-radius: 5px;
   margin: 0.2rem 0;
+  overflow: hidden;
+  -webkit-animation: scaleUP 0.5s forwards;
+          animation: scaleUP 0.5s forwards;
 }
 section .todo p {
-  padding: 0.5rem;
-  line-height: 1.5;
+  padding: 0.25rem 0.5rem;
+  line-height: 2;
+  background: #fff;
+}
+section .todo .todo-text {
+  width: 50%;
+}
+section .todo .todo-time {
+  width: 20%;
+  text-align: center;
 }
 section .todo button {
   padding: 0.25rem 0.5rem;
@@ -214,4 +244,11 @@ section .todo .check {
 }
 section .todo .trash {
   background: red;
+}
+
+.done {
+  text-decoration: line-through;
+  -webkit-text-decoration-style: 0.2rem;
+          text-decoration-style: 0.2rem;
+  opacity: 0.5;
 }/*# sourceMappingURL=all.css.map */

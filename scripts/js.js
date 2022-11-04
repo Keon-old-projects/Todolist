@@ -27,17 +27,28 @@ add.addEventListener("click", e => {
     let checkButton = document.createElement("button");
     checkButton.classList.add('check');
     checkButton.innerHTML='<i class="fa-solid fa-check"></i>'
+    checkButton.addEventListener("click",e=>{
+        let todoItem=e.target.parentElement;
+        todoItem.classList.toggle("done");
+    })
     // 垃圾
     let trashButton = document.createElement('button');
     trashButton.classList.add("trash");
-    trashButton.innerHTML='<i class="fa-solid fa-trash"></i>'
+    trashButton.innerHTML='<i class="fa-solid fa-trash"></i>';
+    trashButton.addEventListener('click',e=>{
+        let todoItem=e.target.parentElement;
+        todoItem.style.animation="scaleDown 0.2s forwards";
+        todoItem.addEventListener("animationend",()=>{
+            todoItem.remove();
+        })
+    })
     
     // 新增icons
     todo.appendChild(checkButton);
     todo.appendChild(trashButton);
 
     //動畫效果
-    todo.style.animation="scaleUP 0.5s forwards"
+    // todo.style.animation="scaleUP 0.5s forwards"
     // 新增清單
     section.appendChild(todo);
 })
